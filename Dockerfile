@@ -11,6 +11,7 @@ RUN apt-get update \
 
 USER gitpod
 
+ADD https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip 
 
 RUN mkdir -p /home/gitpod/rocksetta/logs                                                                                               \ 
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                                                    \
