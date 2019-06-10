@@ -11,9 +11,9 @@ RUN apt-get update \
 
 USER gitpod
 
-ADD https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip 
 
-RUN mkdir -p /home/gitpod/rocksetta/logs                                                                                               \ 
+RUN mkdir -p /home/gitpod/rocksetta/logs                                                                                               \
+    mkdir -p /home/gitpod/rocksetta/android                                                                                            \ 
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                                                    \
     && echo "Can not get android platforms to install will have to use the .gitpod.yml file" >> /home/gitpod/rocksetta/logs/mylogs.txt \
     && echo "Try installing cordova etc" >> /home/gitpod/rocksetta/logs/mylogs.txt                                                     \
@@ -21,6 +21,8 @@ RUN mkdir -p /home/gitpod/rocksetta/logs                                        
     && echo "Good bye from the Dockerfile buildn" >> /home/gitpod/rocksetta/logs/mylogs.txt                                            \
     && echo "Good bye from the Dockerfile build" >> /home/gitpod/rocksetta/logs/mylogs.txt 
 
+ADD https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip \
+    && unzip sdk-tools-linux-4333796.zip -d /home/gitpod/rocksetta/android  
 
 # Give back control
 USER root
