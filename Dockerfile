@@ -25,10 +25,7 @@ RUN mkdir -p /home/gitpod/rocksetta/logs                                        
 WORKDIR /home/gitpod/rocksetta/android
 
 
-RUN mkdir -p /home/gitpod/rocksetta/android                                          \
-    && cd /home/gitpod/rocksetta/android                                             \
-    && wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     \
-    && unzip sdk-tools-linux-4333796.zip -d /home/gitpod/rocksetta/android  
+RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     
 
 
 
