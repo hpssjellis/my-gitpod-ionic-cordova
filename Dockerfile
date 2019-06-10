@@ -11,15 +11,14 @@ RUN apt-get update \
 
 USER gitpod
 
-
-RUN mkdir -p /home/gitpod/rocksetta                                                                                                    \ 
-    && mkdir -p /home/gitpod/rocksetta/logs                                                                                            \ 
-    && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                                                    \
-    && echo "Can not get android platforms to install will have to use the .gitpod.yml file" >> /home/gitpod/rocksetta/logs/mylogs.txt \
-    && echo "Try installing cordova etc" >> /home/gitpod/rocksetta/logs/mylogs.txt                                                     \
-    && npm install -g cordova ionic qrcode                                                                                             \
-    && echo "Good bye from the Dockerfile buildn" >> /home/gitpod/rocksetta/logs/mylogs.txt                                            \
-    && echo "Good bye from the Dockerfile build" >> /home/gitpod/rocksetta/logs/mylogs.txt 
+RUN echo "Installation start, make some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt   \
+    && mkdir -p /home/gitpod/rocksetta                                                                       \ 
+    && mkdir -p /home/gitpod/rocksetta/logs                                                                  \ 
+    && mkdir -p /home/gitpod/.android                                                                        \
+    && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                          \
+    && echo "Try installing cordova, ionic, qrcode" >> /home/gitpod/rocksetta/logs/mylogs.txt                \
+    && npm install -g cordova ionic qrcode                                                                   \
+    && echo "Back to root to install the Android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt                                       
 
 
 
@@ -30,14 +29,24 @@ USER root
 
 
 
-WORKDIR /home/gitpod/rocksetta/android
+WORKDIR /home/gitpod/.android
 
 
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     \
     && unzip sdk-tools-linux-4333796.zip                                          \                                                             
-    && rm sdk-tools-linux-4333796.zip                                             \
-    && chmod 775 -R /home/gitpod/rocksetta/
+    && rm sdk-tools-linux-4333796.zip                                             
 
+
+USER gitpod
+
+
+RUN  echo "Here is the android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt             \
+     && ls -ls /home/gitpod/.android >> /home/gitpod/rocksetta/logs/mylogs.txt   \
+     &&  echo "Installation all done" >> /home/gitpod/rocksetta/logs/mylogs.txt          
+
+
+# Give back control
+USER root
 
 
 # Cleaning
