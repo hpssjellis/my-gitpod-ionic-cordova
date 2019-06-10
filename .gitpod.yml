@@ -26,11 +26,21 @@ tasks:
                 
                 
               echo "Showing the android paths"                         &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt    &&                 
-            
               export ANDROID_SDK_ROOT="/workspace/my-gitpod-ionic-cordova/android"                                                            &&                        
-              export PATH="${PATH}:${ANDROID_SDK_ROOT}tools:${ANDROID_SDK_ROOT}platform-tools"                                                 &&              
+              export PATH="${PATH}:${ANDROID_SDK_ROOT}tools:${ANDROID_SDK_ROOT}platform-tools"                                                &&              
               echo  $PATH                                            &>> /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&        
              
+          
+          
+                   
+
+              echo "Set bash files to runnable"                       &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt    &&                 
+              chmod +x a01-cordova-create.sh                                                                                                 &&      
+              chmod +x a02-cordova-rebuild.sh                                                                                                &&     
+              chmod +x a03-android-sdkmanager.sh                                                                                             && 
+          
+          
+          
           
           
               echo "Starting Apache"                                 &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt      &&   
