@@ -28,8 +28,7 @@ tasks:
               echo "Showing the android paths"                         &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt    &&                 
             
               export ANDROID_SDK_ROOT="/workspace/my-gitpod-ionic-cordova/android"                                                            &&                        
-              export PATH="${PATH}:${ANDROID_SDK_ROOT}tools:${ANDROID_SDK_ROOT}platform-tools"                                                &&   
-              export PATH="${PATH}:/workspace/my-gitpod-ionic-cordova/android/tools/bin"                                                      &&              
+              export PATH="${PATH}:${ANDROID_SDK_ROOT}tools:${ANDROID_SDK_ROOT}platform-tools"                                                 &&              
               echo  $PATH                                            &>> /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&        
              
           
