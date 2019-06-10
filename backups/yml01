@@ -1,0 +1,63 @@
+image:
+  file: Dockerfile
+  
+ports:
+  - port: 8001
+  
+tasks:
+  -  init: touch logs.txt       &&
+           mkdir android        &&
+           mkdir node-cordova   &&
+           mkdir node-qrcode  
+           
+          
+     command: echo "Starting .gitpod.yml installation\n\n"           &>> /workspace/my-gitpod-cordova/logs.txt  &&  
+     
+     
+     
+     
+              echo "Install the Android SDK"                         &>> /workspace/my-gitpod-cordova/logs.txt  &&                 
+              wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                         &&     
+              unzip sdk-tools-linux-4333796.zip -d android                                                      &&            
+              rm sdk-tools-linux-4333796.zip                                                                    &&     
+              ./android/tools/bin/sdkmanager --list                  &>> /workspace/my-gitpod-cordova/logs.txt  &&     
+              yes | ./android/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
+                
+                
+                
+                
+              export ANDROID_SDK_ROOT="/workspace/my-gitpod-cordova/android/"                                   &&                        
+              export PATH="${PATH}:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                &&     
+              echo  $ANDROID_SDK_ROOT                                &>> /workspace/my-gitpod-cordova/logs.txt  &&        
+             
+             
+             
+             
+              echo "Install cordova and qrcode using npm"            &>> /workspace/my-gitpod-cordova/logs.txt  &&    
+              npm install --prefix /workspace/my-gitpod-cordova/node-cordova cordova                            &&     
+              npm install --prefix /workspace/my-gitpod-cordova/node-qrcode qrcode                              &&  
+              export PATH="${PATH}:/workspace/my-gitpod-cordova:/workspace/my-gitpod-cordova/node-cordova/node_modules:/workspace/my-gitpod-cordova/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-cordova/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-cordova/node-qrcode/node_modules"            &&              
+              echo  $PATH                                            &>> /workspace/my-gitpod-cordova/logs.txt  &&     
+          
+         
+         
+
+              echo "Set bash files to runnable"                      &>> /workspace/my-gitpod-cordova/logs.txt  &&                 
+              chmod +x a01-create.sh                                                                            &&      
+              chmod +x a02-re-build.sh                                                                          &&     
+              chmod +x a03-copy-to-folder.sh                                                                    && 
+          
+          
+          
+              echo "Starting Apache\n"                    &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&   
+              apachectl start                                                                                   &&
+              gp await-port 8001                                                                                && 
+              gp preview $(gp url 8001)                                                                         &&
+
+
+         
+              
+              echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-cordova/logs.txt     
+              
+              
+ 
