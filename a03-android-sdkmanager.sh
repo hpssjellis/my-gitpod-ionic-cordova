@@ -3,7 +3,7 @@
 
 # just finding the files
 
-cd ./home/gitpod
+cd /home/gitpod/rocksetta/android
 
 ls -la
 
