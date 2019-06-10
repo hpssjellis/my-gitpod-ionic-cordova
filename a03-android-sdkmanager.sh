@@ -2,25 +2,17 @@
 
 
 # just finding the files
-cd /home/gitpod/rocksetta/android
+cd /home/gitpod/.android
 
 ls -la
 
+echo "Let us run the sdkmanager"
+
+./home/gitpod/.android/tools/bin/sdkmanager --list
 
 
-cd /home/gitpod/rocksetta/android/tools/bin
+# commented out how to install platform 26
+
+#yes | ./home/gitpod/.android/tools/bin/sdkmanager "build-tools;26.0.3" "platforms;android-26"
 
 
-./sdkmanager --list
-
-
-# Need this command to run the sdkmanager to install other android platforms
-
-#cd /workspace/my-gitpod-ionic-cordova
-
-#./android/tools/bin/sdkmanager --list
-
-
-# The command to install Android Plafrom 26 would look something like this
-
-#yes | ./android/tools/bin/sdkmanager "build-tools;26.0.3" "platforms;android-26"
