@@ -12,7 +12,8 @@ RUN apt-get update \
 USER gitpod
 
 
-RUN mkdir -p /home/gitpod/rocksetta/logs                                                                                               \ 
+RUN mkdir -p /home/gitpod/rocksetta                                                                                                    \ 
+    && mkdir -p /home/gitpod/rocksetta/logs                                                                                            \ 
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                                                    \
     && echo "Can not get android platforms to install will have to use the .gitpod.yml file" >> /home/gitpod/rocksetta/logs/mylogs.txt \
     && echo "Try installing cordova etc" >> /home/gitpod/rocksetta/logs/mylogs.txt                                                     \
