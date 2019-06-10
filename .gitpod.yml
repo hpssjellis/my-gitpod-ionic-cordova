@@ -28,7 +28,7 @@ tasks:
                 
               export ANDROID_SDK_ROOT="/workspace/my-gitpod-ionic-cordova/android/"                                                           &&                        
               export PATH="${PATH}:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                                              &&   
-              export PATH="${PATH}:/workspace/my-gitpod-ionic-cordova/android/tools/bin                                                       &&              
+              export PATH="${PATH}:/workspace/my-gitpod-ionic-cordova/android/tools/bin/"                                                    &&              
               echo  $PATH                                            &>> /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&        
              
           
