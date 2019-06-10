@@ -7,8 +7,7 @@ ports:
 tasks:
   -  init: touch logs.txt       &&
            mkdir android        &&
-           mkdir node-cordova   &&
-           mkdir node-qrcode  
+
            
           
      command: echo "Starting .gitpod.yml installation\n\n"           &>> /workspace/my-gitpod-cordova/logs.txt  &&  
@@ -30,23 +29,6 @@ tasks:
               export PATH="${PATH}:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                &&     
               echo  $ANDROID_SDK_ROOT                                &>> /workspace/my-gitpod-cordova/logs.txt  &&        
              
-             
-             
-             
-              echo "Install cordova and qrcode using npm"            &>> /workspace/my-gitpod-cordova/logs.txt  &&    
-              npm install --prefix /workspace/my-gitpod-cordova/node-cordova cordova                            &&     
-              npm install --prefix /workspace/my-gitpod-cordova/node-qrcode qrcode                              &&  
-              export PATH="${PATH}:/workspace/my-gitpod-cordova:/workspace/my-gitpod-cordova/node-cordova/node_modules:/workspace/my-gitpod-cordova/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-cordova/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-cordova/node-qrcode/node_modules"            &&              
-              echo  $PATH                                            &>> /workspace/my-gitpod-cordova/logs.txt  &&     
-          
-         
-         
-
-              echo "Set bash files to runnable"                      &>> /workspace/my-gitpod-cordova/logs.txt  &&                 
-              chmod +x a01-create.sh                                                                            &&      
-              chmod +x a02-re-build.sh                                                                          &&     
-              chmod +x a03-copy-to-folder.sh                                                                    && 
-          
           
           
               echo "Starting Apache\n"                    &>> /workspace/my-gitpod-dockerfile-cordova/logs.txt  &&   
