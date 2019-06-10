@@ -10,14 +10,14 @@ RUN apt-get update \
 
 
 USER gitpod
-
-RUN echo "Installation start, make some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt   \
-    && mkdir -p /home/gitpod/rocksetta                                                                       \ 
-    && mkdir -p /home/gitpod/rocksetta/logs                                                                  \ 
-    && mkdir -p /home/gitpod/.android                                                                        \
-    && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                          \
-    && echo "Try installing cordova, ionic, qrcode" >> /home/gitpod/rocksetta/logs/mylogs.txt                \
-    && npm install -g cordova ionic qrcode                                                                   \
+  
+RUN mkdir -p /home/gitpod/rocksetta                                                                            \ 
+    && mkdir -p /home/gitpod/rocksetta/logs                                                                    \ 
+    && mkdir -p /home/gitpod/.android                                                                          \
+    && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                            \
+    && echo "Installation start, made some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt  \
+    && echo "Try installing cordova, ionic, qrcode" >> /home/gitpod/rocksetta/logs/mylogs.txt                  \
+    && npm install -g cordova ionic qrcode                                                                     \
     && echo "Back to root to install the Android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt                                       
 
 
