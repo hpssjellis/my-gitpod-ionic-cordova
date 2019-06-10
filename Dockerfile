@@ -23,6 +23,13 @@ RUN mkdir -p /home/gitpod/rocksetta                                             
 
 
 
+
+
+# Give back control
+USER root
+
+
+
 WORKDIR /home/gitpod/rocksetta/android
 
 
@@ -30,7 +37,6 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 
 
 
-# Give back control
-USER root
+
 # Cleaning
 RUN apt-get clean
