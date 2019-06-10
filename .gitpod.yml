@@ -5,13 +5,13 @@ ports:
   - port: 8001
   
 tasks:
-  -  init: mkdir /workspace/my-gitpod-ionic-cordova/logs                              &&
-           touch /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&
-           mkdir /workspace/my-gitpod-ionic-cordova/android                           &&
+  -  command: mkdir /workspace/my-gitpod-ionic-cordova/logs                              &&
+              touch /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&
+              mkdir /workspace/my-gitpod-ionic-cordova/android                           &&
 
            
           
-     command: echo "Starting .gitpod.yml installation"              &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&  
+              echo "Starting .gitpod.yml installation"              &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&  
      
      
      
