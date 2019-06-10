@@ -33,8 +33,9 @@ USER root
 WORKDIR /home/gitpod/rocksetta/android
 
 
-RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     
-
+RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     \
+    && unzip sdk-tools-linux-4333796.zip                                          \                                                             
+    && rm sdk-tools-linux-4333796.zip   
 
 
 
