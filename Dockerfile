@@ -43,7 +43,7 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && rm sdk-tools-linux-4333796.zip                                             \
     && chmod -R 775 /home/gitpod/.android                                         \
     && chown -R gitpod:gitpod /home/gitpod/.android                               \
-    && yes | .sdkmanager --licenses 
+    && yes | ./sdkmanager --licenses 
     
 #RUN   yes | sdkmanager --licenses    
     
