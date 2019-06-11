@@ -22,4 +22,12 @@ To install more android sdk platforms
 
 A Gitpod snapshot of this site is here [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/2004e075-7b07-4542-99b4-2c88ca98fc44)
 
+I am new to Ionic so this might take a while to get correct.
+
+Check out this Ionic CheatSheet
+https://devdactic.com/ionic-cheatsheet/
+
+
+And here are the ionic Docs
+https://ionicframework.com/docs/cli
 
