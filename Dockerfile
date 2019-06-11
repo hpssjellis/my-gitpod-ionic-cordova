@@ -44,6 +44,9 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && chmod -R 775 /home/gitpod/.android                                         \
     && chown -R gitpod:gitpod /home/gitpod/.android                               
     
+    
+RUN   yes | sdkmanager --licenses    
+    
     #\ 
     #&& yes | sdkmanager --licenses                                                
     
@@ -75,7 +78,7 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
 
 USER gitpod
 
-Run  yes | sdkmanager --licenses  
+
 
 RUN  echo "Here is the android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt             \
      && ls -ls /home/gitpod/.android >> /home/gitpod/rocksetta/logs/mylogs.txt            \
