@@ -22,7 +22,7 @@ RUN mkdir -p /home/gitpod/rocksetta                                             
     && echo "Back to root to install the Android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt                
     
 
-RUN yes | sdkmanager --licenses && yes | sdkmanager --update
+
 
 
 
@@ -43,6 +43,10 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && rm sdk-tools-linux-4333796.zip                                             \
     && chmod -R 775 /home/gitpod/.android                                         \
     && chown -R gitpod:gitpod /home/gitpod/.android                               
+
+RUN yes | sdkmanager --licenses && yes | sdkmanager --update
+
+
 
   #  && echo "y" | sdkmanager --licenses                                           \
     
