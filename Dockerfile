@@ -45,45 +45,8 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && chown -R gitpod:gitpod /home/gitpod/.android                               
 
 
-
-
-
-  #  && echo "y" | sdkmanager --licenses                                           \
-    
-#RUN   yes | sdkmanager --licenses    
-    
-    #\ 
-    #&& yes | sdkmanager --licenses                                                
-    
-    
-    
-    
-    #&& yes | sdkmanager --licenses                                                \
-    #&& yes | sdkmanager --update                                                  \
-    
-    
-   # && yes | sdkmanager "build-tools;28.0.3" "platforms;android-28"               \
-
-    
-    #\ 
-    #&& chmod 775 -R /home/gitpod/.android                                         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 USER gitpod
 
-#RUN yes | ./android/tools/bin/sdkmanager --licenses && yes | ./android/tools/bin/sdkmanager --update
 
 RUN  echo "Here is the android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt             \
      && ls -ls /home/gitpod/.android >> /home/gitpod/rocksetta/logs/mylogs.txt            \
