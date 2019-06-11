@@ -11,7 +11,7 @@ echo "Let us run the sdkmanager"
 sdkmanager --list
 
 echo "try"
-echo "sdkmanager "build-tools;26.0.3" "platforms;android-26"
+echo "yes | sdkmanager "build-tools;26.0.3" "platforms;android-26"
 
 # commented out how to install platform 26
 
