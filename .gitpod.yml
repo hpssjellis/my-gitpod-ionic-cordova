@@ -21,7 +21,7 @@ tasks:
               sdkmanager --list                        &>> /workspace/my-gitpod-cordova/logs.txt                            &&     
               yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"                                 &&  
              
-              echo "Set bash files to runnable"        &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt  &&                 
+              echo "Set bash files to runable"         &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt  &&                 
               chmod +x a01-cordova-create.sh                                                                                                &&      
               chmod +x a02-cordova-rebuild.sh                                                                                               &&     
               chmod +x a03-android-sdkmanager.sh                                                                                            && 
