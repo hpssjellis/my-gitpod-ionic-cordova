@@ -36,7 +36,7 @@ WORKDIR /home/gitpod/.android
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     \
     && unzip sdk-tools-linux-4333796.zip                                          \                                                             
     && rm sdk-tools-linux-4333796.zip                                             \
-    && yes | tools/bin/sdkmanager "build-tools;26.0.3" "platforms;android-26"  \ 
+    && yes | ./tools/bin/sdkmanager "build-tools;28.0.3" "platforms;android-28"  \ 
     && chmod 775 -R /home/gitpod/.android                                         
 
 
