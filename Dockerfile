@@ -14,6 +14,7 @@ USER gitpod
 RUN mkdir -p /home/gitpod/rocksetta                                                                            \ 
     && mkdir -p /home/gitpod/rocksetta/logs                                                                    \ 
     && mkdir -p /home/gitpod/.android                                                                          \
+    && touch /home/gitpod/.android/repositories.cfg                                                            \
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                            \
     && echo "Installation start, made some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt  \
     && echo "Try installing cordova, ionic, qrcode" >> /home/gitpod/rocksetta/logs/mylogs.txt                  \
@@ -42,7 +43,7 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && unzip sdk-tools-linux-4333796.zip                                          \                                                             
     && rm sdk-tools-linux-4333796.zip                                             \     
     && chmod -R 775 /home/gitpod/.android                                         \
-    && chown -R 3333:3333 /home/gitpod/.android  
+    && chown -R gitpod:gitpod /home/gitpod/.android  
     
     
     
