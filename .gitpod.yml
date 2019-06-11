@@ -16,6 +16,8 @@ tasks:
               chmod +x a01-cordova-create.sh                                                                                &&      
               chmod +x a02-cordova-rebuild.sh                                                                               &&     
               chmod +x a03-android-sdkmanager.sh                                                                            && 
+              chmod -R 775 /home/gitpod/.android                                                                            &&
+             
           
    
               echo "Installing Android Platforms "     &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt  &&  
