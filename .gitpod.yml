@@ -21,9 +21,9 @@ tasks:
               echo "Installing Android Platforms "     &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt  &&  
               export ANDROID_SDK_ROOT=" /home/gitpod/.android"                                                              &&                        
               export PATH="${PATH}:${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools"  &&                       
-              echo  $PATH                              &>> /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt   &&        
-              sdkmanager --list                        &>> /workspace/my-gitpod-cordova/logs.txt                            &&     
-              yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"                                 &&  
+              echo  $PATH                              &>> /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt   &&   
+              yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"                                 &&       
+              sdkmanager --list                        &>> /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt   &&     
              
 
           
@@ -31,8 +31,9 @@ tasks:
               apachectl start                                                                                               &&
               gp await-port 8001                                                                                            && 
               gp preview $(gp url 8001)                                                                                     &&
-
- 
+              
+              
+              
               echo "Ending .gitpod.yml installation"  &>>   /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt    
               
               
