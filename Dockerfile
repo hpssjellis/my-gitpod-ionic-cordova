@@ -34,8 +34,7 @@ USER root
 
 
  ENV ANDROID_SDK_ROOT /home/gitpod/.android
- ENV ANDROID_HOME /home/gitpod/.android
- ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+ ENV PATH ${PATH}:${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools
 
 WORKDIR /home/gitpod/.android
 
@@ -43,8 +42,10 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && unzip sdk-tools-linux-4333796.zip                                          \                                                             
     && rm sdk-tools-linux-4333796.zip                                             \
     && chmod -R 775 /home/gitpod/.android                                         \
-    && chown -R gitpod:gitpod /home/gitpod/.android                               \ 
-    && yes | sdkmanager --licenses                                                
+    && chown -R gitpod:gitpod /home/gitpod/.android                               
+    
+    #\ 
+    #&& yes | sdkmanager --licenses                                                
     
     
     
