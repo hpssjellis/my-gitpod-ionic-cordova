@@ -40,10 +40,9 @@ WORKDIR /home/gitpod/.android
 
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     \
     && unzip sdk-tools-linux-4333796.zip                                          \                                                             
-    && rm sdk-tools-linux-4333796.zip                                             
-    
-    #&& chmod -R 775 /home/gitpod/.android                                         \
-    #&& chown -R gitpod:gitpod /home/gitpod/.android                               
+    && rm sdk-tools-linux-4333796.zip                                             \
+    && chmod -R 775 /home/gitpod/.android                                         \
+    && chown -R gitpod:gitpod /home/gitpod/.android                               
 
 
 USER gitpod
