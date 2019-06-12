@@ -16,7 +16,8 @@ tasks:
               chmod +x a02-cordova-rebuild.sh                                                                               &&     
               chmod +x a03-android-sdkmanager.sh                                                                            && 
               chmod +x a04-ionic-start.sh                                                                                   && 
-              
+              chmod +x a05-ionic-rebuild.sh                                                                                 && 
+             
 
               chmod -R 775 /home/gitpod/.android                                                                            &&
              
