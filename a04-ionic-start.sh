@@ -23,7 +23,7 @@ cp /workspace/my-gitpod-ionic-cordova/$wow4/platforms/android/app/build/outputs/
 
 
 qrcode -o /workspace/my-gitpod-ionic-cordova/public/qrout.png $(gp url 8001);
-echo "<br>Just a QR code to the same androidwebpage <br><img src='qrout.png'><br>" >> /workspace/my-gitpod-ionic-cordova/public/index.html
+echo "<br>Just a QR code to the same webpage <br><img src='qrout.png'><br>" >> /workspace/my-gitpod-ionic-cordova/public/index.html
 
 echo "<li><a href="$wow4-app-debug$number.apk">$wow4-app-debug$number.apk</a><br>" >> /workspace/my-gitpod-ionic-cordova/public/index.html
 
