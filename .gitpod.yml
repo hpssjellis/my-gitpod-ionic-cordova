@@ -17,6 +17,10 @@ tasks:
               chmod +x a03-android-sdkmanager.sh                                                                            && 
               chmod +x a04-ionic-start.sh                                                                                   && 
               chmod +x a05-ionic-rebuild.sh                                                                                 && 
+              chmod +x a06-capacitor-create.sh                                                                              && 
+              
+              
+              
              
 
               chmod -R 775 /home/gitpod/.android                                                                            &&
