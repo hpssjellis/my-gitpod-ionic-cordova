@@ -7,7 +7,6 @@ ports:
 tasks:
   -  command: mkdir /workspace/my-gitpod-ionic-cordova/logs                              &&
               touch /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt       &&
-              mkdir /workspace/my-gitpod-ionic-cordova/android                           &&
        
        
               echo "Starting .gitpod.yml installation" &>>  /workspace/my-gitpod-ionic-cordova/logs/gitpod-install-log.txt  &&  
