@@ -20,6 +20,10 @@ cd $wow4
 
 
 npx cap add android
+
+./android/gradlew 
+
+
 #npx cap open android
 npx cap serve
 
