@@ -14,7 +14,7 @@ cd $wow4
 
 
 ionic cordova platform add android
-ionic cordova build --prod
+ionic cordova build android --prod
 
 number=$RANDOM
 
