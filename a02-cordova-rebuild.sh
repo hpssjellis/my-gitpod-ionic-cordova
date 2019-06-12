@@ -17,14 +17,14 @@ cd $wow4
 
 cordova build android --no-telemetry
 
+number=$RANDOM
 
-# backup old .apk
-cp /workspace/my-gitpod-ionic-cordova/public/$wow4-app-debug.apk /workspace/my-gitpod-ionic-cordova/public/$wow4-backup-app-debug.apk
+cp /workspace/my-gitpod-ionic-cordova/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/my-gitpod-ionic-cordova/public/$wow4-app-debug$number.apk
 
-#copy new .apk to the public folder
-cp /workspace/my-gitpod-ionic-cordova/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/my-gitpod-ionic-cordova/public/$wow4-app-debug.apk
 
-echo "<li> Next rebuild <a href="$wow4-app-debug.apk">$wow4-app-debug.apk</a><br>" >> /workspace/my-gitpod-ionic-cordova/public/index.html
+
+
+echo "<li> Next rebuild <a href="$wow4-app-debug$number.apk">$wow4-app-debug$number.apk</a><br>" >> /workspace/my-gitpod-ionic-cordova/public/index.html
 
 
 echo "Refresh your web browser!"
