@@ -26,6 +26,10 @@ cp /workspace/my-gitpod-ionic-cordova/$wow4/platforms/android/app/build/outputs/
 
 echo "<li> Next rebuild <a href="$wow4-app-debug$number.apk">$wow4-app-debug$number.apk</a><br>" >> /workspace/my-gitpod-ionic-cordova/public/index.html
 
+#open the preview pane
+apachectl start
+gp await-port 8001
+gp preview $(gp url 8001)
 
 echo "Refresh your web browser!"
 echo "You must delete your old download on your phone or the installation will give an error as the file name has changed"
