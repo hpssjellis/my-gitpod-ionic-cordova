@@ -22,7 +22,8 @@ To install more android sdk platforms
 
 A Gitpod snapshot of this site is here 
 
-<a href="https://gitpod.io#snapshot/909e6839-50d2-4a70-a67f-fdb5df14182d"><img alt="Open in Gitpod" src="https://gitpod.io/button/open-in-gitpod.svg"></a>
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/909e6839-50d2-4a70-a67f-fdb5df14182d)
+
 
 
 I am new to Ionic so this might take a while to get correct.
